@@ -61,11 +61,6 @@ namespace DTC.UI
 			SetPage(page);
 		}
 
-		private void pnlBackground_MouseDown(object sender, MouseEventArgs e)
-		{
-			Draggable.Drag(Handle, e);
-		}
-
 		public void ToggleEnabled()
 		{
 			//_planeForm.ToggleEnabled();
@@ -85,5 +80,10 @@ namespace DTC.UI
 		{
 			this.WindowState = FormWindowState.Minimized;
 		}
-	}
+
+        private void pnlTop_MouseDown(object sender, MouseEventArgs e)
+        {
+			Draggable.Drag(Handle, e);
+        }
+    }
 }

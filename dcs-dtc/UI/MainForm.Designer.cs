@@ -30,42 +30,28 @@ namespace DTC.UI
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.pnlBackground = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.pnlPages = new System.Windows.Forms.Panel();
-            this.breadCrumbs = new DTC.UI.Base.Controls.DTCBreadCrumb();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblMinimize = new System.Windows.Forms.Label();
             this.lblPin = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblClose = new System.Windows.Forms.Label();
-            this.pnlBackground.SuspendLayout();
+            this.breadCrumbs = new DTC.UI.Base.Controls.DTCBreadCrumb();
             this.pnlContent.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlBackground
-            // 
-            this.pnlBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBackground.BackgroundImage")));
-            this.pnlBackground.Controls.Add(this.label2);
-            this.pnlBackground.Controls.Add(this.pnlContent);
-            this.pnlBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
-            this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(916, 664);
-            this.pnlBackground.TabIndex = 0;
-            this.pnlBackground.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBackground_MouseDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("AmarilloUSAF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(382, 83);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(329, 5);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "V 3.3.0 - RC 14";
             // 
@@ -75,7 +61,7 @@ namespace DTC.UI
             this.pnlContent.Controls.Add(this.pnlPages);
             this.pnlContent.Controls.Add(this.breadCrumbs);
             this.pnlContent.Controls.Add(this.pnlTop);
-            this.pnlContent.Location = new System.Drawing.Point(72, 111);
+            this.pnlContent.Location = new System.Drawing.Point(0, 0);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(770, 450);
             this.pnlContent.TabIndex = 0;
@@ -89,19 +75,11 @@ namespace DTC.UI
             this.pnlPages.Size = new System.Drawing.Size(770, 390);
             this.pnlPages.TabIndex = 4;
             // 
-            // breadCrumbs
-            // 
-            this.breadCrumbs.BackColor = System.Drawing.Color.DarkKhaki;
-            this.breadCrumbs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.breadCrumbs.Location = new System.Drawing.Point(0, 30);
-            this.breadCrumbs.Name = "breadCrumbs";
-            this.breadCrumbs.Size = new System.Drawing.Size(770, 30);
-            this.breadCrumbs.TabIndex = 2;
-            // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.DarkKhaki;
             this.pnlTop.BackgroundImage = global::DTC.Properties.Resources._2560px_Brown_dominant__highland__ERDL_camouflage_pattern_swatch_svg;
+            this.pnlTop.Controls.Add(this.label2);
             this.pnlTop.Controls.Add(this.lblMinimize);
             this.pnlTop.Controls.Add(this.lblPin);
             this.pnlTop.Controls.Add(this.label1);
@@ -111,6 +89,7 @@ namespace DTC.UI
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(770, 30);
             this.pnlTop.TabIndex = 2;
+            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             // 
             // lblMinimize
             // 
@@ -170,31 +149,36 @@ namespace DTC.UI
             this.lblClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
+            // breadCrumbs
+            // 
+            this.breadCrumbs.BackColor = System.Drawing.Color.DarkKhaki;
+            this.breadCrumbs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.breadCrumbs.Location = new System.Drawing.Point(0, 30);
+            this.breadCrumbs.Name = "breadCrumbs";
+            this.breadCrumbs.Size = new System.Drawing.Size(770, 30);
+            this.breadCrumbs.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(916, 664);
-            this.Controls.Add(this.pnlBackground);
+            this.ClientSize = new System.Drawing.Size(770, 450);
+            this.Controls.Add(this.pnlContent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Red;
-            this.pnlBackground.ResumeLayout(false);
-            this.pnlBackground.PerformLayout();
             this.pnlContent.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.ResumeLayout(false);
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Panel pnlBackground;
 		private System.Windows.Forms.Panel pnlContent;
 		private System.Windows.Forms.Panel pnlTop;
 		private System.Windows.Forms.Label lblPin;
